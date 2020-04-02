@@ -525,8 +525,9 @@
 
 				<div class="col-md-8">
 					<!-- Contact Form -->
-					<form id="contact-form" class="contact-form mt-6" method="post" action="https://mailthis.to/info@jamh.ai">
-						
+				<!--	<form id="contact-form" class="contact-form mt-6" method="post" action="https://mailthis.to/info@jamh.ai">
+					--> <form action="https://mailthis.to/info@jamh.ai"
+    method="POST" encType="multipart/form-data">	
 						<div class="messages"></div>
 						
 						<div class="row">
@@ -561,7 +562,9 @@
     						<input type="hidden" name="_confirmation" value="">
 						<button type="submit" name="submit" id="submit" value="Send" class="btn btn-default">Send Message</button><!-- Send Button -->
 						</form>
-						<form action="https://mailthis.to/info@jamh.ai"
+						
+					
+					<form action="https://mailthis.to/info@jamh.ai"
     method="POST" encType="multipart/form-data">
     <input type="text" name="name" placeholder="Your name">    <input type="email" name="_replyto" placeholder="Your email">
     <textarea name="message" placeholder="Enter your message here"></textarea>
