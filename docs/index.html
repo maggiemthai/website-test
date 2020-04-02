@@ -533,7 +533,7 @@
 							<div class="column col-md-6">
 								<!-- Name input -->
 								<div class="form-group">
-									<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Your name" required="required" data-error="Name is required.">
+									<input type="text" class="form-control" name="name" id="InputName" placeholder="Your name" required="required" data-error="Name is required.">
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
@@ -541,18 +541,11 @@
 							<div class="column col-md-6">
 								<!-- Email input -->
 								<div class="form-group">
-									<input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" required="required" data-error="Email is required.">
+									<input type="email" class="form-control" id="InputEmail" name="_replyto" placeholder="Email address" required="required" data-error="Email is required.">
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
 
-							<div class="column col-md-12">
-								<!-- Email input -->
-								<div class="form-group">
-									<input type="text" class="form-control" id="InputSubject" name="InputSubject" placeholder="Subject" required="required" data-error="Subject is required.">
-									<div class="help-block with-errors"></div>
-								</div>
-							</div>
 					
 							<div class="column col-md-12">
 								<!-- Message textarea -->
@@ -562,7 +555,10 @@
 								</div>
 							</div>
 						</div>
-
+						<input type="hidden" name="_subject" value="Contact form submitted">
+    						<input type="hidden" name="_after" value="https://jamh.ai/">
+    						<input type="hidden" name="_honeypot" value="">
+    						<input type="hidden" name="_confirmation" value="">
 						<button type="submit" name="submit" id="submit" value="Send" class="btn btn-default">Send Message</button><!-- Send Button -->
 						</form>
 						<form action="https://mailthis.to/info@jamh.ai"
