@@ -565,13 +565,18 @@
 
 						<button type="submit" name="submit" id="submit" value="Send" class="btn btn-default">Send Message</button><!-- Send Button -->
 						</form>
-						<form action="https://mailthis.to/info@jamh.ai" 
-    method="POST"> 
-    <input type="text" name="name" placeholder="Your name"> 
-    <input type="text" name="message" placeholder="Message"> 
-    <input type="email" name="_replyto" placeholder="Your email"> 
-    <input type="submit" value="Send"> 
-</form> 
+						<form action="https://mailthis.to/info@jamh.ai"
+    method="POST" encType="multipart/form-data">
+    <input type="text" name="name" placeholder="Your name">    <input type="email" name="_replyto" placeholder="Your email">
+    <textarea name="message" placeholder="Enter your message here"></textarea>
+   
+    <input type="hidden" name="_subject" value="Contact form submitted">
+    <input type="hidden" name="_after" value="https://jamh.ai/">
+    <input type="hidden" name="_honeypot" value="">
+    <input type="hidden" name="_confirmation" value="">
+    <input type="submit" value="Send">
+</form>
+
 
 					
 					<!-- Contact Form end -->
